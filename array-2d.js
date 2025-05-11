@@ -26,3 +26,20 @@ const mapInput = splitInput.map(word => {
 
 const result1 = mapInput.join(" "); 
 console.log(result1);
+
+// Return an array of objects with the student's name and their average score ( above 90)
+const students = [
+  { name: "Alice", scores: [90, 85, 92] },
+  { name: "Bob", scores: [75, 80, 85] },
+  { name: "Charlie", scores: [90, 95, 85] },
+  { name: "Jack", scores: [100, 100, 100] }
+];
+
+const studentAverages = students.map(student => {
+  const total = student.scores.reduce((sum, score) => sum + score, 0);
+  const average = total / student.scores.length;
+  return { name: student.name, average };
+});
+const highScorers = studentAverages.filter(student => student.average > 90);
+
+console.log(highScorers);
