@@ -1,4 +1,4 @@
-// an example where the goal is to count the occurrences of distinct elements in a 2D array of strings.using flat() and reduce()
+//count the occurrences of distinct elements in a 2D array of strings.using flat() and reduce()
 
 const input = [
   ["a", "b", "c"],
